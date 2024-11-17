@@ -31,7 +31,7 @@ public class MainException {
             }
             while(!name.isEmpty()){
                 if (regexName.matcher(name).find()) {
-                    System.out.println("numele normale nu pot contine doar litere! " +
+                    System.out.println("numele normale pot contine doar litere! " +
                             "valoarea introdusa nu poate contine caractere speciale sau cifre");
                     System.out.println("va rugam sa reintroduceti numele: ");
                     name = scanner.nextLine();
