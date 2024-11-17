@@ -1,5 +1,8 @@
 package org.exercitiu8;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -7,6 +10,7 @@ public class MainException {
 
     private static final Scanner scanner = new Scanner(System.in);
     static Pattern regexName = Pattern.compile("[0-9$&+,:;=\\\\?@#|/'<>.^*()%!-]");
+    static List<Person> recensamant = new ArrayList<>();
 
     public static void main(String[] args) {
 
@@ -54,11 +58,11 @@ public class MainException {
             //Incercam sa populam clasa persoana cu datele preluate de la utilizator
             try {
                 Person person = new Person(name, personAge);
-                System.out.println(person);
                 System.out.println("am terminat cu " + person.getName() +  ", vreti sa mai introduceti o persoana? \n" +
                         "***************************************************************************** \n" +
                         "tastati 'Y' pt a introduce o alta persoana, sau 'N' pt a iesi \n" +
                         "*****************************************************************************");
+                recensamant.add(person);
             } catch (NegativeAgeException unborn) {
                 throw new NegativeAgeException();
 
@@ -74,6 +78,8 @@ public class MainException {
                 System.out.println("ma bucur ca-ti place!");
             }
             if (repornire.equalsIgnoreCase("N")) {
+                System.out.println("ai reusit sa ii adaugi pe cei de mai jos");
+                recensamant.forEach(System.out::println);
                 System.out.println("cu bine!");
                 restartFlag = false;
             }
