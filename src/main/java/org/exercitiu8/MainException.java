@@ -19,10 +19,12 @@ public class MainException {
         String repornire;
         boolean restartFlag = true;
 
+        System.out.println("Curs infoAcademy = Lectia 8 - Exercitiu 2: \n Sa incepem! ");
+
         while (restartFlag) {
 
             //initiem dialogul
-            System.out.println("Curs infoAcademy = Lectia 8 - Exercitiu 2: \n Sa incepem! \n introduceti numele: ");
+            System.out.println("introduceti numele: ");
             name = scanner.nextLine();
 
             //prevalidarea numelui
@@ -73,11 +75,14 @@ public class MainException {
                 System.out.println("valorile posibile sunt Y (DA) sau N (nu), valoarea vida va fi ignrata");
                 repornire = scanner.nextLine();
             }
+            while (!repornire.isEmpty() && !repornire.equalsIgnoreCase("Y") && !repornire.equalsIgnoreCase("N")) {
+                System.out.println("valorile posibile sunt Y (DA) sau N (nu), vezi ca ai scris: " + repornire);
+                repornire = scanner.nextLine();
+            }
             if (repornire.equalsIgnoreCase("y")) {
                 System.out.println("ma bucur ca-ti place!");
-            }
-            if (repornire.equalsIgnoreCase("N")) {
-                System.out.println("ai reusit sa ii adaugi pe cei de mai jos");
+            }else if (repornire.equalsIgnoreCase("N")) {
+                System.out.println("ai reusit sa ii adaugi pe cei de mai jos, in total: " +recensamant.size());
                 recensamant.forEach(System.out::println);
                 System.out.println("cu bine!");
                 restartFlag = false;
