@@ -1,4 +1,4 @@
-package org.example;
+package org.exercitiu8;
 
 import java.util.Scanner;
 import java.util.regex.Pattern;

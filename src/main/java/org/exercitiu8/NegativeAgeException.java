@@ -1,4 +1,4 @@
-package org.example;
+package org.exercitiu8;
 
 public class NegativeAgeException extends RuntimeException {
 
