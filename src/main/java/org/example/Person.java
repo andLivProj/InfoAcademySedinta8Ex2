@@ -10,7 +10,7 @@ public class Person {
         if(name.length() >= 2){
             this.name = name;
         }else{
-            throw new IllegalArgumentException("Name must be at least 2 characters");
+            throw new IllegalArgumentException("numele trebuie sa contina minim 2 caractere");
         }
         if(age > 0){
             this.age = age;

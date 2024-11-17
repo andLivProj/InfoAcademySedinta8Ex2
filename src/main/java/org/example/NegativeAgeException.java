@@ -8,6 +8,6 @@ public class NegativeAgeException extends RuntimeException {
     }
 
     public String getMessage(){
-        return "Negative age was input";
+        return "Omul trebuie sa se fii nascut";
     }
 }
